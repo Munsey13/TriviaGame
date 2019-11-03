@@ -28,7 +28,7 @@ $(document).ready(function () {
             answers: ["12 months", "9 months", "6 months", "3 months"],
         },
         {
-            question: "Who won the Battle Tournamen in the Sports Festival?",
+            question: "Who won the Battle Tournament in the Sports Festival?",
             answers: ["Shoto Todoroki", "Katsuki Bakugo", "Eijiro Kirishima", "Mezo Shoji"],
         },
         {
@@ -36,9 +36,11 @@ $(document).ready(function () {
             answers: ["Mario", "The Hero Killer", "Jason", "FIJI"],
         },
     ];
-    console.log(triviaQnA);
-    // loops through the questions and attached it to the html id
+    console.log(triviaQnA[0].answers[0]);
+    // loops through the questions and will append each on the an html id, it will keep it hiden till I want it to show on screen 
     for (let i = 0; i < triviaQnA.length; i++) {
+
+        hide();
 
         temp = theQuestion++;
         if (temp === 0) {
@@ -63,12 +65,11 @@ $(document).ready(function () {
             $("#question7").html(triviaQnA[temp].question)
         };
 
-        console.log(theQuestion);
-        console.log(`test  ---- ${triviaQnA[temp].question}`);
-        // $(".question").html(triviaQnA[temp].question)
     }
+    //looking to make a function here that will put the answers on the html
+    console.log(triviaQnA.answers);
 
-    
+
 
     $("#starter").on("click", function () {
         console.log("you clicked this button.")
